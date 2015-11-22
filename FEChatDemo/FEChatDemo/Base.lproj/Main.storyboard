@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FX2-zv-SjI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--连接服务-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这里连接的是LeanCloud的IM服务器，首先需要输入一个账号，建立起与IM服务器的连接，之后才能正常的发起会话并发送消息。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF6-R4-TJz">
+                                <rect key="frame" x="20" y="89" width="280" height="51"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUZ-7c-Vzz">
+                                <rect key="frame" x="20" y="152" width="280" height="38"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入一个账号，如wzf" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YRZ-do-cgp">
+                                        <rect key="frame" x="8" y="4" width="264" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="tAY-TE-4dM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1N-bf-5gN">
+                                <rect key="frame" x="20" y="244" width="280" height="38"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.21437947769999999" green="0.63549176009999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="2Ma-Sj-CQe"/>
+                                </constraints>
+                                <state key="normal" title="连接">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction_conn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TRw-6G-wGz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JUZ-7c-Vzz" secondAttribute="trailing" constant="20" id="I5f-la-5mk"/>
+                            <constraint firstItem="T1N-bf-5gN" firstAttribute="top" secondItem="JUZ-7c-Vzz" secondAttribute="bottom" constant="54" id="KtJ-7X-4Uz"/>
+                            <constraint firstItem="xF6-R4-TJz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="NjO-x5-9E7"/>
+                            <constraint firstItem="JUZ-7c-Vzz" firstAttribute="top" secondItem="xF6-R4-TJz" secondAttribute="bottom" constant="12" id="O77-Wr-sp0"/>
+                            <constraint firstItem="T1N-bf-5gN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Umb-hI-IAX"/>
+                            <constraint firstItem="xF6-R4-TJz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bwL-od-q4l"/>
+                            <constraint firstAttribute="trailing" secondItem="xF6-R4-TJz" secondAttribute="trailing" constant="20" id="gnF-8B-MYy"/>
+                            <constraint firstAttribute="trailing" secondItem="T1N-bf-5gN" secondAttribute="trailing" constant="20" id="gnl-08-oIz"/>
+                            <constraint firstItem="JUZ-7c-Vzz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kCh-7O-6d1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="连接服务" id="TJj-YQ-tAj"/>
+                    <connections>
+                        <outlet property="userIdTxt" destination="YRZ-do-cgp" id="hXH-A5-5a7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="406"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cK7-1x-AT5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FX2-zv-SjI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J4v-s4-Aha">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.21437947769999999" green="0.63549176009999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="b6n-P5-fYu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYq-Ri-WL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="406"/>
+        </scene>
+    </scenes>
+</document>
