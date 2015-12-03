@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FX2-zv-SjI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FX2-zv-SjI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--连接服务-->
@@ -101,6 +101,178 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYq-Ri-WL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="338" y="406"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l3e-WX-oKy">
+            <objects>
+                <viewController id="T0Q-Ey-ajo" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6GN-wF-nKn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pet-mQ-Nvw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LCc-Nx-6MV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adu-by-62m">
+                                <rect key="frame" x="20" y="185" width="280" height="36"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Jv8-AJ-GWU"/>
+                                </constraints>
+                                <state key="normal" title="连接LeanCloud IM服务器"/>
+                                <connections>
+                                    <action selector="btnAction_toChat:" destination="T0Q-Ey-ajo" eventType="touchUpInside" id="ZY8-V6-GKF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入一个账号，如wzf" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqO-lp-YoB">
+                                <rect key="frame" x="20" y="141" width="280" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dGy-DV-Vn0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFy-5t-885">
+                                <rect key="frame" x="48" y="339" width="225" height="36"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="jGU-DZ-WSc"/>
+                                </constraints>
+                                <state key="normal" title="登录 &amp; 选择聊天对象"/>
+                                <connections>
+                                    <action selector="btnAction_toChatWithMember:" destination="T0Q-Ey-ajo" eventType="touchUpInside" id="m1u-AC-gpV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这里连接的是LeanCloud的IM服务器，首先需要输入一个账号，建立起与IM服务器的连接，之后才能正常的发起会话并发送消息。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em0-1V-m95">
+                                <rect key="frame" x="20" y="72" width="280" height="51"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="sEa-oV-oXr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用输入框里的userID连接服务器，点击“连接LeanCloud IM服务器”跳转到“会话列表”界面，当收到其他消息时，会刷新列表，更QQ一样。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBn-Hy-9Qb">
+                                <rect key="frame" x="20" y="228" width="280" height="67"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用输入框里的userID连接服务器，点击“连接LeanCloud IM服务器”跳转到“会话列表”界面，当收到其他消息时，会刷新列表，更QQ一样。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVm-uw-bgz">
+                                <rect key="frame" x="20" y="383" width="280" height="67"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="em0-1V-m95" firstAttribute="leading" secondItem="LCc-Nx-6MV" secondAttribute="leading" constant="20" id="8G1-j0-PE0"/>
+                            <constraint firstAttribute="trailing" secondItem="em0-1V-m95" secondAttribute="trailing" constant="20" id="9yk-Rk-HRi"/>
+                            <constraint firstAttribute="trailing" secondItem="cVm-uw-bgz" secondAttribute="trailing" constant="20" id="Ihp-ll-csU"/>
+                            <constraint firstItem="kBn-Hy-9Qb" firstAttribute="top" secondItem="adu-by-62m" secondAttribute="bottom" constant="7" id="Kou-U3-zbF"/>
+                            <constraint firstItem="kBn-Hy-9Qb" firstAttribute="leading" secondItem="LCc-Nx-6MV" secondAttribute="leading" constant="20" id="L85-nJ-nbK"/>
+                            <constraint firstItem="jqO-lp-YoB" firstAttribute="leading" secondItem="LCc-Nx-6MV" secondAttribute="leading" constant="20" id="R8F-ro-k1z"/>
+                            <constraint firstItem="jqO-lp-YoB" firstAttribute="top" secondItem="em0-1V-m95" secondAttribute="bottom" constant="18" id="Tsk-Ow-iyS"/>
+                            <constraint firstItem="cFy-5t-885" firstAttribute="leading" secondItem="LCc-Nx-6MV" secondAttribute="leading" constant="48" id="X9f-MR-rBz"/>
+                            <constraint firstItem="cVm-uw-bgz" firstAttribute="top" secondItem="cFy-5t-885" secondAttribute="bottom" constant="8" id="bdB-jl-yiC"/>
+                            <constraint firstItem="cVm-uw-bgz" firstAttribute="leading" secondItem="LCc-Nx-6MV" secondAttribute="leading" constant="20" id="e0s-gY-t5q"/>
+                            <constraint firstAttribute="trailing" secondItem="jqO-lp-YoB" secondAttribute="trailing" constant="20" id="gAf-6g-E88"/>
+                            <constraint firstItem="cFy-5t-885" firstAttribute="top" secondItem="kBn-Hy-9Qb" secondAttribute="bottom" constant="44" id="gyT-tc-WbR"/>
+                            <constraint firstAttribute="trailing" secondItem="cFy-5t-885" secondAttribute="trailing" constant="47" id="mV2-Sd-KbN"/>
+                            <constraint firstAttribute="trailing" secondItem="adu-by-62m" secondAttribute="trailing" constant="20" id="mq0-1t-1E6"/>
+                            <constraint firstAttribute="trailing" secondItem="kBn-Hy-9Qb" secondAttribute="trailing" constant="20" id="nyx-Hl-yGt"/>
+                            <constraint firstItem="adu-by-62m" firstAttribute="top" secondItem="jqO-lp-YoB" secondAttribute="bottom" constant="14" id="o47-hB-cNB"/>
+                            <constraint firstItem="adu-by-62m" firstAttribute="leading" secondItem="LCc-Nx-6MV" secondAttribute="leading" constant="20" id="oIo-8K-kUs"/>
+                            <constraint firstItem="em0-1V-m95" firstAttribute="top" secondItem="6GN-wF-nKn" secondAttribute="bottom" constant="8" id="y08-CU-G9z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fT7-I5-yHC"/>
+                    <connections>
+                        <outlet property="usernameTxt" destination="jqO-lp-YoB" id="inQ-jK-LUo"/>
+                        <segue destination="UWi-hr-4OK" kind="push" identifier="toTargetLists" id="JOj-sX-2Fd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lor-lf-flJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="1135"/>
+        </scene>
+        <!--聊天对象-->
+        <scene sceneID="4bH-dB-FeA">
+            <objects>
+                <viewController id="UWi-hr-4OK" customClass="TargetListVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lew-rK-YH9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q6q-lc-vJ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LqI-IG-RfK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IYI-Bj-bWZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="Ypb-Lk-me3">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ypb-Lk-me3" id="Qd0-dR-8TX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UWi-hr-4OK" id="RJP-wY-wqb"/>
+                                    <outlet property="delegate" destination="UWi-hr-4OK" id="gum-vp-YOT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q6q-lc-vJ0" firstAttribute="top" secondItem="IYI-Bj-bWZ" secondAttribute="bottom" id="a0T-Mt-dQ6"/>
+                            <constraint firstItem="IYI-Bj-bWZ" firstAttribute="top" secondItem="LqI-IG-RfK" secondAttribute="top" id="auo-uc-67W"/>
+                            <constraint firstAttribute="trailing" secondItem="IYI-Bj-bWZ" secondAttribute="trailing" id="eKE-Xm-S3A"/>
+                            <constraint firstItem="IYI-Bj-bWZ" firstAttribute="leading" secondItem="LqI-IG-RfK" secondAttribute="leading" id="wBE-6J-v2G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="聊天对象" id="OXT-0a-xY5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QLZ-cg-T1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="1135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hfq-5a-Yqf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y5j-85-eSx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DYZ-K8-wdK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T0Q-Ey-ajo" kind="relationship" relationship="rootViewController" id="iGT-rn-tVd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bs3-Ti-hOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="1135"/>
         </scene>
     </scenes>
 </document>
